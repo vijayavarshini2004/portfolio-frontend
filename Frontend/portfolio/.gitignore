@@ -1,0 +1,10 @@
+ 
+# Ignore node_modules folder
+node_modules/
+
+# Ignore build folder (if you're generating a build)
+build/
+
+# Ignore large video files or specific mp4 files
+*.mp4
+media/videos/React_App_-_Personal_-_Microsoft_Edge_2024-10-19_21-59-43.mp4

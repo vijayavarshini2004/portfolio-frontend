@@ -1,0 +1,138 @@
+/* General Styling */
+.project-page {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    font-family: 'Akaya Kanadaka', sans-serif;
+    background: url('./images/Portfoliobg1.gif') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh; /* Ensure the page covers the full viewport height */
+    color: white;
+}
+
+/* Container for Scrollable Content */
+.project-page-content-container {
+     height: auto; /* Allow the content container to expand */
+    min-height: 100%; /* Ensure it still covers the viewport */
+    overflow-y: auto; /* Enable vertical scrolling if content exceeds viewport */}
+
+/* Overlay Styling */
+.project-page-overlay {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(45, 0, 52, 0.7); /* Dark translucent overlay */
+    z-index: 500; /* Ensure overlay is above the background */
+}
+
+/* Content Styling */
+.project-page-content {
+    position: relative; /* Position relative to the overlay */
+    z-index: 600; /* Ensure content is above the overlay */
+    padding-top: 80px; /* Space from the top, adjust if needed */
+    color: white;
+    text-align: center;
+}
+
+/* Navbar Styling */
+.navbar {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 600; /* Ensure navbar is above the overlay */
+}
+
+/* Back Button Styling */
+.back-button {
+    color: white;
+    text-decoration: none;
+    padding-top: 20px;
+    padding-left: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.back-icon {
+    margin-right: 8px;
+}
+
+/* Project Page Content Styling */
+.project-title {
+    display: flex;
+    justify-content: center;
+    font-size: 36px;
+    margin: 20px 0;
+}
+
+.caption {
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.demo-video {
+    margin: 20px 0;
+    /* Ensure the container has sufficient space and is not hidden */
+    display: inline-block;
+}
+
+.demo-video video {
+    display: block;
+    max-width: 100%;
+    height: auto; /* Maintain aspect ratio */
+}
+
+.project-details {
+    color: white;
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 20px;
+
+    text-align: left;
+}
+
+/* Adjusting spacing between title and description */
+.project-details h2 {
+    color: white;
+
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+.project-details p {
+    margin: 10px 0;
+    padding-left: 40px; /* Increased padding to move text more right */
+}
+
+.project-details a {
+    display: flex;
+    justify-content: center;
+    color: #76d3f5;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.project-details a:hover {
+    text-decoration: underline;
+}        
+.project_documentation{
+    display: flex;
+    justify-content: center;
+}
+  
+.documentation{
+    height: 100px;
+    width: 100px;
+}
+.project_container{
+    height: auto;
+    width: auto;
+    padding: 20px;
+    background-color: rgba(70, 3, 81, 0.7);
+    border-radius: 10px;
+
+}

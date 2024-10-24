@@ -1,0 +1,445 @@
+/* General Styling */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Akaya Kanadaka', sans-serif;  scroll-behavior: smooth;
+  background: url('./images/Portfoliobg1.gif') no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Overlay styling */
+.homepage-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(45, 0, 52, 0.7); /* Background with rgba color */
+  z-index: 500; /* Lower z-index than homepage content and navbar */
+}/* Ensure navbar is always on top *//* Ensure navbar is always on top */
+.navbar {
+  position: absolute;
+  width: calc(100% - 40px); /* Adjust width to account for padding */
+  top: 20px; /* Move navbar down from the top */
+  left: 20px; /* Move navbar away from the left edge */
+  z-index: 1000; /* Ensure navbar is above the overlay and other content */
+  padding: 10px; /* Optional: Add padding for better spacing */
+  display: flex;
+  justify-content: space-between; /* Distribute space between left and center content */
+  align-items: center;
+}
+
+/* Navbar left styling */
+.navbar-left a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Navbar center styling */
+.navbar-center {
+  flex-grow: 1; /* Allows the center to grow and take up available space */
+  display: flex;
+  justify-content: right; /* Center the content inside */
+}
+
+.navbar-right ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin-right: 20px;
+}
+
+.navbar-right ul li {
+  margin-left: 20px;
+}
+
+.navbar-right ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  
+}
+.navbar ul li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px; /* Thickness of underline */
+  background-color: #ffcc00; /* Color of the underline */
+  transition: width 0.3s ease-in-out; /* Smooth transition for underline */
+}
+.navbar-right ul li a:hover {
+  color: #ffcc00;
+  
+}
+
+/* Adjust content styling to avoid overlap */
+.homepage-content {
+  padding-top: 80px; /* Ensure content doesn't hide behind the navbar */
+  position: relative;
+  z-index: 900; /* Ensure homepage content is above the overlay but below the navbar */
+}
+
+/* Profile Section */
+.profile-section {
+  margin-left: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  margin-top: 60px;
+  z-index: 2;
+  position: relative;
+}
+
+.profile-avatar {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+}
+
+.profile-intro {
+  flex: 1;
+  text-align: center;
+}
+
+.profile-intro h1 {
+  color: white;
+  text-shadow: 8px 4px 8px #E000D7;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.profile-intro h2 {
+  color: white;
+}
+
+.download-resume-btn {
+  background-color: #460351;
+  color:white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 15px;
+  margin-top: 20px;
+  display: inline-block;
+  font-weight: bold;
+  box-shadow: 0 4px 8px #E000D7;
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);}
+
+
+.download-resume-btn:hover {
+  transform: scale(1.08);
+  background: linear-gradient(270deg, #8B00A4, #300235); /* Right to left gradient */
+}
+/* About Section */
+.about-section {
+  display: flex;
+  flex-direction: column; /* Stack heading above content */
+  align-items: center;
+  padding: 50px;
+  color: white;
+  z-index: 2;
+  position: relative;
+}
+
+/* Section heading */
+.section-heading {
+  text-align: center; /* Center the "About Me" heading */
+  padding-bottom: 20px; /* Add space below the heading */
+  text-shadow: 8px 4px 8px #E000D7;
+  width: 100%; /* Make the heading span the entire width */
+}
+
+/* Content layout */
+.about-content {
+  display: flex;
+  justify-content: space-between; /* Align text and image on opposite sides */
+  align-items: center;
+  max-width: 1200px; /* Optional: Set max-width to constrain content width */
+  width: 100%; /* Full width of the parent container */
+  flex-wrap: wrap; /* Allow the content to wrap if needed on smaller screens */
+}
+
+/* Text styling */
+.about-text {
+  flex: 1;
+  padding: 0 40px; /* Add padding around the text */
+  text-align: left; /* Ensure text is left-aligned */
+}
+
+.about-content p {
+  width: auto;
+  height: auto;
+  background-color: #460351; /* Violet Shade */
+  box-shadow: 0 4px 8px #E000D7;
+  border-radius: 10px;
+  padding: 10px;
+  align-items: center;
+}
+
+/* Gradient Hover Effect */
+.about-content p:hover {
+  background: linear-gradient(270deg, #8B00A4, #300235); /* Right to left gradient */
+}
+
+/* Image styling */
+.about-image {
+  flex: 1;
+  text-align: right; /* Align the image to the right */
+}
+
+.about-image img {
+  height: auto;
+  width: 500px; /* Adjust the width as needed */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px #E000D7;
+  margin-left: 40px; /* Add some space between the image and text */
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column; /* Stack text and image on smaller screens */
+    align-items: center;
+  }
+
+  .about-image {
+    text-align: center;
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  .about-image img {
+    width: 80%; /* Adjust image width for smaller screens */
+  }
+
+  .about-text {
+    text-align: center; /* Center text on smaller screens */
+    padding: 0 20px; /* Reduce padding for smaller screens */
+  }
+}
+
+
+/* Experience Section */
+.experience-section {
+  display: grid;
+  justify-content: center;
+  text-align: center;
+  margin-top: 50px;
+  color: white;
+  z-index: 2;
+  position: relative;
+}
+.experience-section h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  text-shadow: 8px 8px 8px #E000D7;
+}
+.experience-section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+.skills {
+  display: flex;
+  justify-content: center;
+  gap:5%;
+  flex-wrap: wrap;
+  flex:5;
+
+}
+
+.skill-item {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #460351; /* Violet Shade */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px #E000D7;
+  object-fit: contain;
+  overflow: hidden;
+  flex-direction: column;
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);}
+.skill-item:hover{
+  transform: scale(1.08);
+}
+
+.skill-item img {
+  width: 90%;
+  height: 90%;
+}
+
+/* Media Queries */
+@media (max-width: 320px) {
+  .skill-item {
+    width: 35px;
+    height: 35px;
+    margin: 10px;
+  }
+
+  .skill-item img {
+    width: 80%;
+    height: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .skill-item {
+    width: 55px;
+    height: 55px;
+    margin: 15px;
+  }
+
+  .skill-item img {
+    width: 85%;
+    height: 85%;
+  }
+}
+
+@media (min-width: 801px) {
+  .skill-item {
+    width: 90px;
+    height: 90px;
+    margin: 20px;
+  }
+
+  .skill-item img {
+    width: 90%;
+    height: 90%;
+  }
+}
+
+@media (min-width: 1025px) {
+  .skill-item {
+    width: 120px;
+    height: 120px;
+    margin: 25px;
+  }
+
+  .skill-item img {
+    width: 90%;
+    height: 90%;
+  }
+}
+
+@media (min-width: 1281px) {
+  .skill-item {
+    width: 130px;
+    height: 130px;
+    margin: 30px;
+  }
+
+  .skill-item img {
+    width: 90%;
+    height: 90%;
+  }
+}
+
+.projects-heading {
+  text-align: center;
+  margin-top: 50px;
+  color: white;
+  z-index: 2;
+  position: relative;
+  justify-content: center;
+  text-shadow: 8px 8px 8px #E000D7 ;
+}
+.projects-section {
+  text-align: center;
+  margin-top: 50px;
+  color: white;
+  z-index: 2;
+  position: relative;
+ 
+  flex-wrap: wrap; /* Allow cards to wrap to the next line if necessary */
+  justify-content: center; /* Center the cards horizontally */
+}
+
+.project-card {
+  width: 300px;
+  background-color: rgba(70, 3, 81, 0.7);
+  margin: 20px; /* Space between cards */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px #E000D7;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Align content to the bottom */
+  max-height: 350px; /* Use max-height instead of fixed height */
+  overflow: hidden; /* Hide overflow content if needed */
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);}
+  .project-card:hover {
+    transform: scale(1.08); }
+
+.project-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  border-radius: 10px 10px 0 0;
+}
+
+.project-cards{
+  display: flex;
+  justify-content: center;
+  gap:5%;
+  flex-wrap: wrap;
+  flex:3;
+}
+
+.project-card h3 {
+  padding: 15px;
+  color: white;
+}
+
+.project-card a {
+  display: inline-flex; /* Align button horizontally */
+  align-items: center;
+  justify-content: center;
+  margin: 10px auto; /* Center button horizontally with margin */
+  background-color: #8B00A4;
+  color: white;
+  padding: 10px 20px; /* Add padding to the button */
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+.project-card a:hover {
+  background-color: #721085;
+}
+
+
+/* Contact Section */
+.contact-section {
+  height: 200px;
+  width: 100%;display: grid;
+  justify-content: center;
+  background: rgba(45, 0, 52, 0.7); /* Background with rgba color */
+  text-align: center;
+  margin-top: 50px;
+  z-index: 2;
+  position: relative;
+}
+
+.contact-section h2 {
+  color: white;
+  font-size: 32px;
+  margin-bottom: 20px;
+  text-shadow: 8px 8px 8px #E000D7 ;
+
+}
+
+.social-links img {
+  width: 60px;
+  margin: 20px;
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);}
+
+
+.social-links a:hover img {
+  transform :scale(1.08);
+  filter: brightness(1.2);
+}
