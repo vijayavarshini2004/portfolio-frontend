@@ -21,19 +21,19 @@ const Home = () => {
     const fetchData = async () => {
       try {
         // Fetch profile data
-        const profileResponse = await axios.get('http://127.0.0.1:8000/api/profiles/');
+        const profileResponse = await axios.get('https://vvarshini.pythonanywhere.com/api/profiles/');
         setProfileData(profileResponse.data[0] || {}); // Assuming the response is a list and we take the first item
 
         // Fetch about data
-        const aboutResponse = await axios.get('http://127.0.0.1:8000/api/about/');
+        const aboutResponse = await axios.get('https://vvarshini.pythonanywhere.com/api/about/');
         setAboutData(aboutResponse.data[0] || {}); // Assuming the response is a list and we take the first item
 
         // Fetch skills data
-        const skillsResponse = await axios.get('http://127.0.0.1:8000/api/skills/');
+        const skillsResponse = await axios.get('https://vvarshini.pythonanywhere.com/api/skills/');
         setSkills(skillsResponse.data || []);
 
         // Fetch projects data
-        const projectsResponse = await axios.get('http://127.0.0.1:8000/api/homepage-projects/');
+        const projectsResponse = await axios.get('https://vvarshini.pythonanywhere.com/api/homepage-projects/');
         setProjects(projectsResponse.data || []);
       } catch (error) {
         console.error('Error fetching data:', error);

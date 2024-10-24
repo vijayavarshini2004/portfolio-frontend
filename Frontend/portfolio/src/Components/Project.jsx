@@ -11,7 +11,7 @@ const Project = () => {
 useEffect(() => {
   const fetchProject = async () => {
     try {
-      const response = await axios.get(`http://127.0.0.1:8000/api/projects/${id}/`);
+      const response = await axios.get(`https://vvarshini.pythonanywhere.com/api/projects/${id}/`);
       console.log('Fetched project:', response.data); // Log fetched data
       setProject(response.data);
     } catch (error) {
